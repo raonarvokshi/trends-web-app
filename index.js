@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.SERVER_PORT;
 
 const localhost = `http://localhost:${port}`;
 const NewsAPIKey = process.env.NEWS_API_KEY;
