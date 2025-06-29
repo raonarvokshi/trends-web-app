@@ -1,0 +1,120 @@
+.link {
+  position: relative;
+  overflow: hidden;
+}
+
+.link::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #007bff;
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.link:hover::after {
+  transform: scale(1);
+}
+
+.dashboard-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-link::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.dashboard-link:hover::after {
+  transform: scale(1);
+}
+
+
+/* Jep pak hapesirë poshtë gjithçkaje për ajrosje */
+.dataTables_wrapper {
+  margin-top: 1rem;
+}
+
+div.dt-buttons {
+  margin-bottom: 10px;
+}
+
+div.dataTables_length {
+  margin-right: 5rem;
+}
+
+div.dataTables_filter {
+  margin-bottom: 1rem;
+}
+
+.buttons-colvis {
+  background-color: #0d6efd !important;
+  border: none !important;
+  color: white !important;
+}
+
+.buttons-excel {
+  background-color: #28a745  !important;
+  border: none !important;
+  color: white !important;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  margin-right: 0.5rem;
+}
+
+.buttons-pdf {
+  background-color: #dc3545  !important;
+  border: none !important;
+  color: white !important;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  margin-right: 0.5rem;
+}
+
+.buttons-print {
+  background-color: #17a2b8  !important;
+  border: none !important;
+  color: white !important;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  margin-right: 0.5rem;
+}
+
+.buttons-page-length {
+  background-color: #0d6efd !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 0.375rem;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none;
+  outline: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+  color: #6c757d !important;
+  background-color: #e9ecef !important;
+  pointer-events: none;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+   margin-top: 1rem;
+}
