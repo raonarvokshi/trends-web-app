@@ -1,7 +1,7 @@
 import express from "express";
 import axios from "axios";
 import { stockMarketAPIKey } from "../index.js";
-import { authenticateToken } from "../middleware/middleware";
+import { authenticateToken } from "../middleware/middleware.js";
 
 
 const router = express.Router();

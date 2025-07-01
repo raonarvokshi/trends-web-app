@@ -3,7 +3,7 @@ import axios from "axios";
 import { NewsAPIKey } from "../index.js";
 import { moviesAPIKey } from "../index.js";
 import { stockMarketAPIKey } from "../index.js";
-import { authenticateToken } from "../middleware/middleware";
+import { authenticateToken } from "../middleware/middleware.js";
 
 
 const router = express.Router();

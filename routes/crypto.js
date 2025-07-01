@@ -1,6 +1,6 @@
 import express from "express";
 import axios from "axios";
-import { authenticateToken } from "../middleware/middleware";
+import { authenticateToken } from "../middleware/middleware.js";
 
 const router = express.Router();
 
