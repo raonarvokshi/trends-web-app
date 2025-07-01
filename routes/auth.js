@@ -1,9 +1,16 @@
 import express from "express";
+import db from "../db.js";
 
 const router = express.Router();
 
 router.get("/login", (req, res) => {
   res.render("auth/login.ejs");
+});
+
+router.post("/login", (req, res) => {
+  const email = req.body.email;
+  const password = req.body.password;
+  console.log(email, password)
 });
 
 router.get("/register", (req, res) => {

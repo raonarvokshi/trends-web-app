@@ -1,6 +1,8 @@
 import express from "express";
 import axios from "axios";
 import { moviesAPIKey } from "../index.js";
+import { authenticateToken } from "../middleware/middleware";
+
 
 const router = express.Router();
 

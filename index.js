@@ -1,6 +1,6 @@
 import express from "express";
-import axios from "axios";
 import dotenv from "dotenv";
+import bodyParser from "body-parser";
 import news from "./routes/news.js";
 import movies from "./routes/movies.js";
 import crypto from "./routes/crypto.js";
@@ -20,7 +20,7 @@ export const stockMarketAPIKey = process.env.STOCK_MARKET_API_KEY;
 
 
 app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(news);
 app.use(movies);

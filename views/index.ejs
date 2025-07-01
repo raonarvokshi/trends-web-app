@@ -27,13 +27,66 @@
     main {
       flex: 1;
     }
+
+    .link {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: #fff;
+      transform: scale(0);
+      transform-origin: left;
+      transition: transform 0.5s ease;
+    }
+
+    .link:hover::after {
+      transform: scale(1);
+    }
   </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">TOP</a>
+      <a class="navbar-brand" href="/">TOP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link link" aria-current="page" href="/">Home</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link link" href="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link" aria-current="page" href="/news">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link" href="/popular/movies">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link" href="/crypto">Crypto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link" href="/stocks">Stocks market</a>
+          </li> -->
+
+          <li class="nav-item">
+            <a class="nav-link link" href="/login">Login</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link link" href="/register">Register</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
