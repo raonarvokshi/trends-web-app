@@ -6,6 +6,7 @@ import movies from "./routes/movies.js";
 import crypto from "./routes/crypto.js";
 import stocks from "./routes/stocks.js";
 import dashboard from "./routes/dashboard.js";
+import auth from "./routes/auth.js";
 
 dotenv.config();
 
@@ -26,11 +27,12 @@ app.use(movies);
 app.use(crypto);
 app.use(stocks);
 app.use(dashboard);
+app.use(auth);
 
 
 app.get("/", (req, res) => {
   res.render("index.ejs");
-})
+});
 
 app.listen(port, () => {
   console.log(`Server running on ${localhost}`)

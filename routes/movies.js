@@ -82,9 +82,6 @@ router.get("/popular/movies/search", async (req, res) => {
   }
 });
 
-
-
-
 router.get("/top-rated/movies", async (req, res) => {
   const page = parseInt(req.query.page) || 1;
   const selectedGenre = req.query.genre;

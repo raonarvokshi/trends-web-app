@@ -1,3 +1,38 @@
+.login-container {
+    margin-top: 10em;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register-container {
+    margin-top: 10em;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.account-container {
+    margin-top: 8em;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.change-pass-container {
+    margin-top: 9em;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.delete-acc-container {
+    margin-top: 10em;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .link {
   position: relative;
   overflow: hidden;
