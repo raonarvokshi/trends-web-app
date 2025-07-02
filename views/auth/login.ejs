@@ -20,13 +20,13 @@
           <span class="text-muted">Don't have an account?</span> 
           <a href="/register" class="register-link text-decoration-none">Create one</a>
         </p>
-        <form action="/login" method="POST" class="mt-5">
+        <form action="/login" method="POST" class="mt-4">
           <div class="mb-4">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="Email..." required>
           </div>
           
-          <div class="mb-5">
+          <div class="mb-4">
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="Password..." required>
           </div>
@@ -34,7 +34,7 @@
           <button type="submit" class="btn btn-primary btn-lg w-100">Log in</button>
           
           <% if (locals.error) { %>
-            <div id="error-msg" class="text-danger"><%= error %></div>
+            <div id="error-msg" class="text-danger mt-3"><%= error %></div>
             <% } %>
             <% if (locals.success) { %>
               <div id="success-msg" class="text-success"><%= success %></div>
@@ -43,7 +43,7 @@
           </div>
         </div>
       </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
       $(document).ready(function () {
           const errorMsg = $("#error-msg");

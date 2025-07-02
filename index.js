@@ -7,6 +7,8 @@ import crypto from "./routes/crypto.js";
 import stocks from "./routes/stocks.js";
 import dashboard from "./routes/dashboard.js";
 import auth from "./routes/auth.js";
+import cookieParser from "cookie-parser";
+import { verifyToken } from "./middleware/middleware.js";
 
 dotenv.config();
 
@@ -22,6 +24,7 @@ export const stockMarketAPIKey = process.env.STOCK_MARKET_API_KEY;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cookieParser());
 app.use(news);
 app.use(movies);
 app.use(crypto);
@@ -30,8 +33,8 @@ app.use(dashboard);
 app.use(auth);
 
 
-app.get("/", (req, res) => {
-  res.render("index.ejs");
+app.get("/", verifyToken, (req, res) => {
+  res.render("index.ejs", { user: req.user });
 });
 
 app.listen(port, () => {

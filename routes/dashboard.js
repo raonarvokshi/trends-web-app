@@ -9,7 +9,7 @@ import { authenticateToken } from "../middleware/middleware.js";
 const router = express.Router();
 
 
-router.get("/dashboard", async (req, res) => {
+router.get("/dashboard", authenticateToken, async (req, res) => {
   try {
     const [newsRes, movieRes, cryptoRes, stockRes] = await Promise.all([
       axios.get(`https://newsapi.org/v2/top-headlines`, {

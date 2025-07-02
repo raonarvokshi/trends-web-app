@@ -6,7 +6,7 @@ import { authenticateToken } from "../middleware/middleware.js";
 
 const router = express.Router();
 
-router.get("/stocks", async (req, res) => {
+router.get("/stocks", authenticateToken, async (req, res) => {
   const selectedSymbol = req.query.symbol || "AAPL";
   const stockSymbols = ["AAPL", "MSFT", "GOOGL", "AMZN", "META", "TSLA", "NVDA", "NFLX", "INTC", "BABA"];
   try {

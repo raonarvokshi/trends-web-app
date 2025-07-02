@@ -6,8 +6,7 @@ import { authenticateToken } from "../middleware/middleware.js";
 
 const router = express.Router();
 
-
-router.get("/popular/movies", async (req, res) => {
+router.get("/popular/movies", authenticateToken, async (req, res) => {
   const page = parseInt(req.query.page) || 1;
   const selectedGenre = req.query.genre;
   const limit = 12;
@@ -49,7 +48,7 @@ router.get("/popular/movies", async (req, res) => {
 });
 
 
-router.get("/popular/movies/search", async (req, res) => {
+router.get("/popular/movies/search", authenticateToken, async (req, res) => {
   const query = req.query.q?.toLowerCase() || "";
   const selectedGenre = req.query.genre;
   let data = [];
@@ -84,7 +83,8 @@ router.get("/popular/movies/search", async (req, res) => {
   }
 });
 
-router.get("/top-rated/movies", async (req, res) => {
+
+router.get("/top-rated/movies", authenticateToken, async (req, res) => {
   const page = parseInt(req.query.page) || 1;
   const selectedGenre = req.query.genre;
   const limit = 12;
@@ -123,7 +123,7 @@ router.get("/top-rated/movies", async (req, res) => {
 });
 
 
-router.get("/top-rated/movies/search", async (req, res) => {
+router.get("/top-rated/movies/search", authenticateToken, async (req, res) => {
   const query = req.query.q?.toLowerCase() || "";
   const selectedGenre = req.query.genre;
   let data = [];
@@ -159,9 +159,7 @@ router.get("/top-rated/movies/search", async (req, res) => {
 });
 
 
-
-
-router.get("/upcoming/movies", async (req, res) => {
+router.get("/upcoming/movies", authenticateToken, async (req, res) => {
   const page = parseInt(req.query.page) || 1;
   const selectedGenre = req.query.genre;
   const limit = 12;
@@ -198,7 +196,7 @@ router.get("/upcoming/movies", async (req, res) => {
 });
 
 
-router.get("/upcoming/movies/search", async (req, res) => {
+router.get("/upcoming/movies/search", authenticateToken, async (req, res) => {
   const query = req.query.q?.toLowerCase() || "";
   const selectedGenre = req.query.genre;
   let data = [];
@@ -234,8 +232,7 @@ router.get("/upcoming/movies/search", async (req, res) => {
 });
 
 
-
-router.get("/movie/:id", async (req, res) => {
+router.get("/movie/:id", authenticateToken, async (req, res) => {
   const movieId = req.params.id;
   let recResults;
 

@@ -4,7 +4,7 @@ import { authenticateToken } from "../middleware/middleware.js";
 
 const router = express.Router();
 
-router.get("/crypto", async (req, res) => {
+router.get("/crypto", authenticateToken, async (req, res) => {
   let cryptoCache = null;
   let lastFetched = 0;
   const CACHE_DURATION = 60 * 1000;

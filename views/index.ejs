@@ -62,29 +62,38 @@
           <li class="nav-item">
             <a class="nav-link link" aria-current="page" href="/">Home</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link link" href="/dashboard">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link" aria-current="page" href="/news">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link" href="/popular/movies">Movies</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link" href="/crypto">Crypto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link" href="/stocks">Stocks market</a>
-          </li> -->
 
-          <li class="nav-item">
-            <a class="nav-link link" href="/login">Login</a>
-          </li>
+          <% if (locals.user) { %>
+            <li class="nav-item">
+              <a class="nav-link link" href="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" aria-current="page" href="/news">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="/popular/movies">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="/crypto">Crypto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="/stocks">Stocks market</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="/logout">Logout</a>
+            </li>
+          <% } %>
 
-          <li class="nav-item">
-            <a class="nav-link link" href="/register">Register</a>
-          </li>
+          <% if (!locals.user) { %>
+            <li class="nav-item">
+              <a class="nav-link link" href="/login">Login</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link link" href="/register">Register</a>
+            </li>
+          <% } %>
+          
         </ul>
       </div>
     </div>

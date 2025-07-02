@@ -6,7 +6,7 @@ import { authenticateToken } from "../middleware/middleware.js";
 
 const router = express.Router();
 
-router.get("/news", async (req, res) => {
+router.get("/news", authenticateToken, async (req, res) => {
   const category = req.query.category || "";
   const page = parseInt(req.query.page) || 1;
   const pageSize = 12;
