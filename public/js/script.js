@@ -1,5 +1,5 @@
 
-if (window.location.href === "http://localhost:3000/popular/movies") {
+if (window.location.href === "https://trends-web-app-production.up.railway.app/popular/movies") {
   // POPULAR MOVIES (AJAX)
   const popularInput = document.getElementById("popularSearchInput");
   const popularResults = document.getElementById("popularResults");
@@ -39,7 +39,7 @@ if (window.location.href === "http://localhost:3000/popular/movies") {
   }
 }
 
-if (window.location.href === "http://localhost:3000/top-rated/movies") {
+if (window.location.href === "https://trends-web-app-production.up.railway.app/top-rated/movies") {
   // TOP RATED MOVIES (AJAX)
   const topRatedInput = document.getElementById("topRatedSearchInput");
   const topRatedResults = document.getElementById("topRatedResults");
@@ -74,7 +74,7 @@ if (window.location.href === "http://localhost:3000/top-rated/movies") {
 
 
 
-if (window.location.href === "http://localhost:3000/upcoming/movies") {
+if (window.location.href === "https://trends-web-app-production.up.railway.app/upcoming/movies") {
   // UPCOMING MOVIES (AJAX)
   const input = document.getElementById("movieSearchInput");
   const movieResults = document.getElementById("movieResults");
@@ -110,7 +110,7 @@ if (window.location.href === "http://localhost:3000/upcoming/movies") {
 
 
 
-if (window.location.href === "http://localhost:3000/crypto") {
+if (window.location.href === "https://trends-web-app-production.up.railway.app/crypto") {
   $('#cryptoTable').DataTable({
     dom: 'PBfrtip',
     pageLength: 5,
