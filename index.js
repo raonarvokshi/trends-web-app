@@ -13,8 +13,7 @@ import { verifyToken } from "./middleware/middleware.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT;
-
+const PORT = process.env.PORT || 3000;
 const localhost = `http://localhost:${PORT}`;
 export const NewsAPIKey = process.env.NEWS_API_KEY;
 export const moviesAPIKey = process.env.MOVIES_API_KEY;
@@ -42,5 +41,5 @@ app.get("/", verifyToken, (req, res) => {
 });
 
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running on ${localhost}`)
+  console.log(`Server running on ${localhost}`);
 });
