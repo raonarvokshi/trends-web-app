@@ -90,7 +90,7 @@ router.post("/register", async (req, res) => {
           return res.render("auth/register.ejs", { error: "Error while registering! something is wrong please try again later." });
         }
 
-        await db.query("INSERT INTO users (username, email, password) VALUES ($1, $2, $3)",
+        await db.query("INSERT INTO users (username, email, password) VALUES ($1, $2, $3) RETURNING *",
           [username, email, hash]
         );
 
