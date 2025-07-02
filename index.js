@@ -34,7 +34,7 @@ app.use(auth);
 
 
 app.get("/", verifyToken, (req, res) => {
-  res.render("index.ejs", { user: req.user });
+  res.render("index.ejs", { user: req.user || null });
 });
 
 app.listen(PORT, '0.0.0.0', () => {
